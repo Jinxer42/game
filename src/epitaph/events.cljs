@@ -5,41 +5,40 @@
 
    :asteroid
    {:name :asteroid
-    :set-vars {:state :extinct}
-    :desc ["In $STARDATE, $PLANET collided with a $ADJ $OBJ, resulting in a "
-           "mass extinction event which wiped out all traces of $CIV "
-           "civilization."]
+    ;;:set-vars {:state :extinct}
+    :desc ["In $STARDATE, $PLANET collided with a $ADJ $OBJ, "
+           "however the $CIV were strong and managed to survive what would have otherwise been a"
+           "mass extinction event."]
     :vocab {"$ADJ" ["wandering" "wayward"]
             "$OBJ" ["asteroid" "comet" "planetoid"]}}
 
    :volcano
    {:name :volcano
-    :set-vars {:state :extinct}
+    ;;:set-vars {:state :extinct}
     :desc ["In $STARDATE, a massive volcanic eruption filled the skies of "
-           "$PLANET with ash and blotted out the sun. The ensuing volcanic "
-           "winter threw the planet's delicate ecosystem wildly out of "
-           "balance, bringing about the end of $CIV civilization."]}
+           "$PLANET with ash and blotted out the sun. But no volcano "
+           "is strong enough to stop the $CIV and they survived."]}
 
    :gamma-ray-burst
    {:name :gamma-ray-burst
     :set-vars {:state :extinct}
-    :desc ["In $STARDATE, a gamma-ray burst – caused by the explosion of a "
+    :desc ["In $STARDATE, $CIV got extremely unlucky and a gamma-ray burst – caused by the explosion of a "
            "star roughly $DIST $UNIT from the $SYSTEM system – showered "
            "$PLANET in high energy electromagnetic radiation. The planet's "
            "atmospheric ozone layer shielded planetary life from immediate "
            "harm, but was dramatically depleted in the process. Stripped of "
            "its protection against ordinary UV radiation, the planet's ecosystem "
-           "gradually collapsed, ushering in the end of $CIV civilization."]
+           "gradually collapsed, ushering in the end of $CIV civilization. "
+           "Because afterall, no one can survive a gamma-ray burst."]
     :vocab {"$DIST" #(+ 900 (* 100 (rand-int 80)))
             "$UNIT" ["light-years" "parsecs"]}}
 
    :food-illness
    {:name :food-illness
-    :set-vars {:state :extinct}
+    ;;:set-vars {:state :extinct}
     :desc ["In $STARDATE, a food-borne illness began to spread rapidly through "
-           "the $CIV population. Less than 10% of the $CIV survived the plague, "
-           "causing a population bottleneck which eventually brought about the "
-           "total collapse of $CIV civilization."]}
+           "the $CIV population. Only 20% of the $CIV survived the plague, "
+           "luckily this was enough for the $CIV to rebuild their civilization."]}
 
    ;; food-related extinction events
 
@@ -49,7 +48,8 @@
     :desc ["Due to the extreme effectiveness of stone tools in hunting $BEAST, "
            "the $CIV managed to hunt the $BEAST species to extinction. Being "
            "reliant on the $BEAST for food, the $CIV then suffered a famine "
-           "which brought about the end of $CIV civilization."]}
+           "which brought about the end of $CIV civilization. "
+           "Clearly, the $CIV were stupid and deserved to die."]}
 
    :overfishing
    {:name :overfishing
@@ -59,14 +59,14 @@
            "extinction. The ensuing famine brought about a total collapse of "
            "$CIV civilization."]}
 
-   :crop-failure
-   {:name :crop-failure
-    :set-vars {:state :extinct}
-    :desc ["In $STARDATE, a combination of $ADJ weather and pestilence caused "
-           "a near-total failure of the $CROP crop. Being overreliant on $CROP "
-           "cultivation for food, the $CIV then suffered a massive famine which "
-           "brought about the end of $CIV civilization."]
-    :vocab {"$ADJ" ["inclement" "poor"]}}
+   ;;:crop-failure
+   ;;{:name :crop-failure
+    ;;:set-vars {:state :extinct}
+    ;;:desc ["In $STARDATE, a combination of $ADJ weather and pestilence caused "
+     ;;      "a near-total failure of the $CROP crop. Being overreliant on $CROP "
+     ;;      "cultivation for food, the $CIV then suffered a massive famine which "
+     ;;      "brought about the end of $CIV civilization."]
+    ;;:vocab {"$ADJ" ["inclement" "poor"]}}
 
    ;; second-tier tech-related extinction events
 
